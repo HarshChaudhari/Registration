@@ -36,6 +36,10 @@ def login(request):
       
       if MyLoginForm.is_valid():
          username = MyLoginForm.cleaned_data['username']
+         password1 = MyLoginForm.cleaned_data['password']
+         if not Profile1.objects.filter(name=username).filter(password = password1):
+                return render(request, 'login.html', {"error_message" : 'Incorrect username/password'})
+                
    else:
       MyLoginForm = LoginForm()
 		

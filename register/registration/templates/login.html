@@ -1,6 +1,7 @@
 <html>
    <body>
-      
+      {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+       
       <form name = "form" action = "{% url 'registration.views.login' %}" 
          method = "POST" >{% csrf_token %}
          
