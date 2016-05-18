@@ -1,0 +1,57 @@
+<html>
+   <body>
+   
+      <form name = "form" enctype = "multipart/form-data" 
+         action = "{% url 'registration.views.SaveProfile' %}" method = "POST" >{% csrf_token %}
+         
+         <div style = "max-width:470px;">
+            <center>  
+               <input type = "text" style = "margin-left:20%;" 
+               placeholder = "Enter Name" name = "username" required/>
+            </center>
+         </div>
+			
+         <br>
+         
+         <div style = "max-width:470px;">
+            <center>  
+               <input type = "text" style = "margin-left:20%;" 
+               placeholder = "Enter lastname" name = "lastName" required/>
+            </center>
+         </div>
+			
+         <br>
+         
+         <div style = "max-width:470px;">
+            <center>  
+               <input type = "password" style = "margin-left:20%;" 
+               placeholder = "Type password" name = "password" required/>
+            </center>
+         </div>
+         
+         <br>
+
+         <div style = "max-width:470px;">
+            <center>  
+               <input type = "password" style = "margin-left:20%;" 
+               placeholder = "Retype password" name = "passwordAgain" required/>
+            </center>
+         </div>
+         
+         <br>
+
+         <div style = "max-width:470px;">
+            <center> 
+            
+               <button style = "border:0px;background-color:#4285F4; margin-top:8%; 
+                  height:35px; width:80%; margin-left:19%;" type = "submit" value = "Login" >
+                  <strong>Register</strong>
+               </button>
+               
+            </center>
+         </div>
+         
+      </form>
+      
+   </body>
+</html>
